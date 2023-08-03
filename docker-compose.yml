@@ -28,7 +28,6 @@ services:
             - meilisearch
             - mailpit
             - selenium
-        command: php artisan key:generate
     mysql:
         image: 'mysql/mysql-server:8.0'
         ports:
