@@ -13,10 +13,10 @@
 
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
-        <link rel="preload" as="style" href="http://api-prueba-ave-production.up.railway.app/build/assets/app-45c3c7cf.css">
-        <link rel="modulepreload" href="http://api-prueba-ave-production.up.railway.app/build/assets/app-4a08c204.js">
-        <link rel="stylesheet" href="http://api-prueba-ave-production.up.railway.app/build/assets/app-45c3c7cf.css">
-        <script type="module" src="http://api-prueba-ave-production.up.railway.app/build/assets/app-4a08c204.js"></script>
+        <link rel="preload" as="style" href="https://api-prueba-ave-production.up.railway.app/build/assets/app-45c3c7cf.css">
+        <link rel="modulepreload" href="https://api-prueba-ave-production.up.railway.app/build/assets/app-4a08c204.js">
+        <link rel="stylesheet" href="https://api-prueba-ave-production.up.railway.app/build/assets/app-45c3c7cf.css">
+        <script type="module" src="https://api-prueba-ave-production.up.railway.app/build/assets/app-4a08c204.js"></script>
     </head>
     <body class="font-sans antialiased">
         <div class="min-h-screen bg-gray-100 dark:bg-gray-900">
