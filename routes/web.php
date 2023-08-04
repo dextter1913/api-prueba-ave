@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\web\CreateUsersController;
+use App\Http\Controllers\web\DeleteUsersController;
+use App\Http\Controllers\web\ReadUsersController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,9 +21,6 @@ Route::get('/', function () {
     return view('auth.login');
 });
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
 
@@ -36,10 +35,12 @@ Route::middleware('auth')->group(function () {
     /**
      * rutas para los clientes
      */
+    Route::get('/dashboard', [ReadUsersController::class, 'index'])->name('dashboard');
     Route::get('/clients', [CreateUsersController::class, 'index'])->name('clients');
     Route::post('/clients', [CreateUsersController::class, 'create'])->name('create');
+
+    Route::get('/clients/{id}', [DeleteUsersController::class, 'destroy'])->name('destroy');
     // Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
-    // Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
 });
 
