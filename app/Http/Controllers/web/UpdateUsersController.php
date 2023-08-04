@@ -37,11 +37,10 @@ class UpdateUsersController extends Controller
                 ];
                 UsuariosModel::where('id', $request->all()['id'])
                     ->update($fillable);
-                $message = "Modificado correctamente";
             }
         } catch (\Throwable $e) {
-            $message = "error " . $e->getMessage();
+            echo "error " . $e->getMessage();
         }
-        return view('modulos.form-client')->with(['message' => $message]);
+        return redirect()->action([ReadUsersController::class, 'index']);
     }
 }
