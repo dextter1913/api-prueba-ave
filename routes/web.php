@@ -37,6 +37,7 @@ Route::middleware('auth')->group(function () {
      * rutas para los clientes
      */
     Route::get('/clients', [CreateUsersController::class, 'index'])->name('clients');
+    Route::post('/clients', [CreateUsersController::class, 'create'])->name('create');
     // Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     // Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 

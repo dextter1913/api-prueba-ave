@@ -22,8 +22,9 @@ return new class extends Migration
             $table->text('documento_base64')->comment('base 64 de el documento de identidad del cliente');
             $table->string('correo')->comment('Correo electronico del cliente');
             $table->string('cliente_creado_por')->comment('Usuario de la persona que inserto el cliente');
-            $table->string('cliente_eliminado_por')->comment('Usuario de la persona que elimino el cliente');
+            $table->string('cliente_eliminado_por')->nullable()->comment('Usuario de la persona que elimino el cliente');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 
