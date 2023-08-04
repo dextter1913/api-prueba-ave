@@ -1,10 +1,10 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
-use App\Http\Controllers\Web\CreateUsersController;
-use App\Http\Controllers\Web\DeleteUsersController;
-use App\Http\Controllers\Web\ReadUsersController;
-use App\Http\Controllers\Web\UpdateUsersController;
+use App\Http\Controllers\web\CreateUsersController;
+use App\Http\Controllers\web\DeleteUsersController;
+use App\Http\Controllers\web\ReadUsersController;
+use App\Http\Controllers\web\UpdateUsersController;
 use Illuminate\Support\Facades\Route;
 
 /*
