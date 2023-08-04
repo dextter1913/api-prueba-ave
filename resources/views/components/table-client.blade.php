@@ -53,10 +53,10 @@
                     {{ $usuario->celular }}
                 </td>
                 <td class="px-6 py-4">
-                    <a href="">{{ $usuario->correo }}</a>
+                    <a href="data:application/pdf;base64,{{ $usuario->documento_base64 }}" class="font-medium text-blue-600 dark:text-blue-500 hover:underline" download="documento.pdf">Descargar</a>
                 </td>
                 <td class="px-6 py-4">
-                    {{ $usuario->documento }}
+                    {{ $usuario->correo }}
                 </td>
                 <td class="px-6 py-4 text-right">
                     <a href="{{ route('edit', $usuario->id) }}" class="font-medium text-blue-600 dark:text-blue-500 hover:underline" title="Editar">E</a>
