@@ -59,6 +59,7 @@
                     {{ $usuario->documento }}
                 </td>
                 <td class="px-6 py-4 text-right">
+                    <a href="{{ route('edit', $usuario->id) }}" class="font-medium text-blue-600 dark:text-blue-500 hover:underline" title="Editar">E</a>
                     <a href="{{ route('destroy', $usuario->id) }}" class="font-medium text-red-600 dark:text-red-500 hover:underline" title="Eliminar">X</a>
                 </td>
             </tr>
