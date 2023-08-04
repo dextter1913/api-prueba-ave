@@ -21,6 +21,9 @@ class UpdateUsersController extends Controller
             if (isset($request->all()['_token'])) {
 
                 $documento_base64 = UsuariosModel::select('documento_base64')->where('id', $request->all()['id'])->get()[0]['documento_base64'];
+                if (!empty($request->all()['documento_base64'])) {
+                    $documento_base64 = base64_encode(file_get_contents($request->all()['documento_base64']));
+                }
                 $request->all()['documento_base64'] = $documento_base64;
                 $fillable = [
                     'documento'          => $request->all()['documento'],
